@@ -31,8 +31,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     transition: 1s;
-    justify-content: center
-    ;
+    justify-content: center;
 }
 
 #backg4 {
@@ -42,12 +41,14 @@ body {
 }
 
 section {
-    min-height: 100vh ;
+    min-height: 100vh;
     width: 100vw;
     margin: 0%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+
 }
 
 h1 {
@@ -67,7 +68,7 @@ h3 {
     font-style: bold;
     font-size: 28px;
     color: black;
-    margin: 0;
+    margin: 0 100px;
     justify-content: center;
 }
 
@@ -92,7 +93,10 @@ button {
     cursor: pointer;
     margin: 5% auto;
     opacity: 0.75;
+}
 
+button:hover {
+    opacity: 1;
 }
 
 .rectangle {
@@ -126,7 +130,7 @@ button {
     height: 220px;
     margin: 10% auto;
     border: solid black;
-    background: url(nappe-phreatique.jpg);
+    background: url(./images/nappe-phreatique.jpg);
     background-size: cover;
     border-bottom-left-radius: 20%;
     border-bottom-right-radius: 20%;
@@ -138,7 +142,7 @@ button {
     width: 550px;
     height: 10px;
     margin: auto;
-    background: url(herbe.jpg);
+    background: url(./images/herbe.jpg);
     background-size: cover;
 }
 
@@ -146,7 +150,7 @@ button {
     width: 550px;
     height: 18px;
     margin: 0% auto;
-    background: url(humus.jpg);
+    background: url(./images/humus.jpg);
     background-size: cover;
 }
 
@@ -154,7 +158,7 @@ button {
     width: 550px;
     height: 45px;
     margin: 0% auto;
-    background: url(roche-mère.jpg);
+    background: url(./images/roche-mère.jpg);
     background-size: cover;
 }
 
@@ -165,7 +169,7 @@ button {
     margin-bottom: 0%;
     border-bottom-left-radius: 27%;
     border-bottom-right-radius: 27%;
-    background: url(wave.jpg);
+    background: url(./images/wave.jpg);
     background-size: 550px 149px;
     background-repeat: repeat-x;
     animation: flow 20s linear infinite;
@@ -203,9 +207,11 @@ button {
     margin: -3% auto;
 
 }
+
 .canva {
     margin-top: 1%;
 }
+
 #myChart {
     background-color: rgb(139, 184, 203);
     margin: 18% auto 5%;
@@ -226,10 +232,26 @@ h4 {
 }
 
 #graphe-nappe {
-    background: url(villeurbanne.jpg);
+    background: url(./images/villeurbanne.jpg);
     color: black;
     border: solid black;
     margin: 7% auto 0 auto;
     width: 1100px;
     height: 500px;
+}
+
+@media only screen and (max-width: 1100px) {
+    #graphe-nappe {
+        transform: rotate(90deg);
+    }
+
+    h3 {
+        margin-left: 60px;
+        margin-right: 60px;
+        font-size: 15px;
+    }
+
+    section {
+        gap: 100px;
+    }
 }

@@ -1,4 +1,3 @@
-
 const barCanvas = document.getElementById('myChart');
 new Chart(barCanvas, {
   type: 'bar',
@@ -60,24 +59,22 @@ function recupData() {
   fetch("https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques_tr?bss_id=BSS001TMCR&size=100&fields=date_mesure,profondeur_nappe&sort=desc")
     .then(res => res.json())
     .then(données => {
-      //console.log(données)
       for (let i = 0; i < données.data.length; i++) {
         datas.push(données.data[i].profondeur_nappe);
         dates.push(données.data[i].date_mesure);
       }
-      //console.log(datas)
       const ctx = document.getElementById('graphe-nappe');
       new Chart(ctx, {
         type: 'line',
         data: {
           labels: dates.reverse(),
           datasets: [{
-              label: 'profondeur de l\'eau au point de mesure en mètres toutes les 3 heures',
-              data: datas.reverse(),
-              borderWidth: 1,
-              borderColor: 'black',
-              backgroundColor: 'blue'
-            }],
+            label: 'profondeur de l\'eau au point de mesure en mètres toutes les 3 heures',
+            data: datas.reverse(),
+            borderWidth: 1,
+            borderColor: 'black',
+            backgroundColor: 'blue'
+          }],
         },
         options: {
           responsive: true,
@@ -124,7 +121,7 @@ function recupData() {
           }
         }
       })
-    }); 
+    });
 }
 
 recupData();
