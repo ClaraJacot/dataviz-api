@@ -7,11 +7,11 @@ d'eau en France et à Villeurbanne particulièrement.
 
 OBJECTIFS :
 
--Fetch une API
--Faire de la visualistion de data en temps réel
--Se familiariser avec le local storage
--S'entrainer au HTML/CSS/JS
--Utiliser des bibliothèques JS
+- Fetch une API
+- Faire de la visualistion de data en temps réel
+- Se familiariser avec le local storage
+- S'entrainer au HTML/CSS/JS
+- Utiliser des bibliothèques JS
 
 
 DESCRIPTION : 
